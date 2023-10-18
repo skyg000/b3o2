@@ -29,8 +29,8 @@ function Login() {
           } else if(res.data[0].id === inputId) {
               // id, pw 모두 일치 userId = userId1, msg = undefined
               console.log('======================','로그인 성공')
-              window.sessionStorage.setItem('id', inputId)
-              window.sessionStorage.setItem('gender', res.data[0].gender)
+              sessionStorage.setItem('id', inputId)
+              sessionStorage.setItem('gender', res.data[0].gender)
               // 작업 완료 되면 페이지 이동
               router.push("../../pages/checkfortune");
           }
