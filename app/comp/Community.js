@@ -1,6 +1,6 @@
 "use client"
 import React, { useEffect, useState } from 'react';
-import community from '../pages/community/community.module.scss';
+import community from '../style/community.module.scss';
 
 import axios from 'axios';
 

@@ -1,7 +1,7 @@
 "use client"
 import Link from 'next/link'
 import { useEffect, useState } from 'react';
-import write from '../pages/write/write.module.scss'
+import write from '../style/write.module.scss'
 import axios from 'axios';
 import { useRouter } from 'next/navigation';
 
