@@ -34,10 +34,10 @@ function Matchlist() {
 		getMData();
 		getFData();
 	}, [])
-
-	const currentUserID = window.sessionStorage.getItem('id');
-	const currentUserGender = window.sessionStorage.getItem('gender');
+	const currentUserID = typeof window !== 'undefined' ? window.sessionStorage.getItem('id') : null;
+	const currentUserGender = typeof window !== 'undefined' ? window.sessionStorage.getItem('gender') : null;
 	const filteredMdata = Mdata.filter((mobj) => mobj.id !== currentUserID);
+
 
 
 	const genderFilteredMdata = filteredMdata.filter((mobj) => {

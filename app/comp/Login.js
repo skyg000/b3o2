@@ -66,15 +66,3 @@ function Login() {
 
 export default Login;
 
-/*  function(error,result,fields){
-                    if(error)throw error;
-                    if(result.length > 0){
-                        req.session.is_logined = true;      // 세션 정보 갱신
-                        req.session.name = id;
-                        req.session.save(function () {
-                        res.redirect(`/`);
-                    })
-                }else{
-                    res.send(`alert("실패")`);
-                }
-            } */

@@ -7,7 +7,7 @@ import axios from "axios";
 function PickOne() {
     const [pickList, setPickList] = useState([]);
     useEffect(() => {
-        const id = window.sessionStorage.getItem("id")
+        const id = typeof window !== 'undefined' ? window.sessionStorage.getItem("id") :null
         // myPick이 true : 내가 찜한 애
         // myPick이 false : 나를 찜한 애
         axios.get(`/api/matchlist?myPick=false&id=${id}`)

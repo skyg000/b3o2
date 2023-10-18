@@ -17,7 +17,7 @@ const Myfortune = function () {
 
     fetchData();
   }, []);
-  const sessionId = window.sessionStorage.getItem("id");
+  const sessionId = typeof window !== 'undefined' ? window.sessionStorage.getItem("id") :null ;
 
   const loginUser = userId.find((member) => member.id === sessionId);
   console.log(loginUser);

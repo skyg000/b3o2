@@ -20,15 +20,15 @@ function Checkfortune() {
       setMemberData(res.data);
     });
   }, []);
+  if(!window){
+    const sessionId = window.sessionStorage.getItem("id");
+    loginUser = memberData.find((member) => member.id === sessionId);
+  }
 
-  const sessionId = window.sessionStorage.getItem("id");
 
-  const loginUser = memberData.find((member) => member.id === sessionId);
-
-  console.log(loginUser);
   return (
     <div className={styles.container}>
-      {memberData.length > 0 && (
+      {loginUser && (
         <>
           <div className={styles.row}>
             <p className={styles.nameInput}>{loginUser.name}</p>
