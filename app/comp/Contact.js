@@ -9,7 +9,7 @@ function Contact() {
     const id = usePathname().split('/')[3];
     const [kakao, setKakao] = useState("");
     useEffect(() => {
-        axios.get(`/api/matchlist/matched?id=${id}&opntid=${sessionStorage.getItem('id')}`)
+        axios.get(`/api/matchlist/matched?id=${id}&opntid=${typeof window !== 'undefined' ? sessionStorage.getItem('id') : null}`)
         .then(res => setKakao(res.data.kakao));
     }, []);
 
