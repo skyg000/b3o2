@@ -1,7 +1,7 @@
 "use client"
 
 import bord from './bord.module.scss'
-import Bord from '../../comp/Bord'
+import Bord from '../comp/Bord'
 import Community from '../../comp/Community'
 import Link from 'next/link'
 import { useState } from 'react'
