@@ -1,6 +1,6 @@
 "use client"
 import React from 'react'
-import contact from '../pages/contact/contact.module.scss'
+import contact from '../style/contact.module.scss'
 
 
 function PickOne() {
