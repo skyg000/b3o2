@@ -5,7 +5,7 @@ function page() {
     const [isLogin, setIsLogin] = useState(false)
  
     useEffect(() => {
-        if(sessionStorage.getItem('id') === null){
+        if(window.sessionStorage.getItem('id') === null){
         // sessionStorage 에 user_id 라는 key 값으로 저장된 값이 없다면
         console.log('isLogin ?? :: ', isLogin)
         } else {
