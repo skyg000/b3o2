@@ -20,10 +20,8 @@ function Checkfortune() {
       setMemberData(res.data);
     });
   }, []);
-  if (typeof window !== 'undefined') {
-    const sessionId = window.sessionStorage.getItem("id");
-    // 나머지 코드
-  }
+
+  const sessionId = window.sessionStorage.getItem("id");
 
   const loginUser = memberData.find((member) => member.id === sessionId);
 
