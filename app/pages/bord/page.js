@@ -1,6 +1,6 @@
 "use client"
 
-import bord from '../../pages/bord/bord.module.scss'
+import bord from './bord.module.scss'
 import Bord from '../../comp/Bord'
 import Community from '../../comp/Community'
 import Link from 'next/link'
