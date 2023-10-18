@@ -1,0 +1,35 @@
+
+.home{
+    max-width: 480px;
+    background-color: #FFDF8C;
+   
+    .cardtitle{
+        padding: 30px 0 0 50px ;
+        font-size: 1.2rem;
+    }
+    
+    .cardalign{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 30px auto;
+        width: 400px;
+    }
+    .card{
+        width: 46%; 
+        margin: 2%;
+        height: 230px;
+        text-align: center;
+        background-color: white;
+        border-radius: 3px;
+        box-shadow: 0 0 10px #FF9359;
+        >img{
+            width: 80%;
+            margin-top: 30px;
+        }
+    }
+    .loading{
+        width: 150px;
+        margin: auto;
+    }
+}

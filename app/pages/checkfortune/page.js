@@ -1,5 +1,5 @@
 import React from "react";
-import Checkfortune from "./../../comp/Checkfortune";
+import Checkfortune from "../../comp/Checkfortune";
 function page() {
   return (
     <>

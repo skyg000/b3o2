@@ -1,4 +1,4 @@
-import Matchlist from '@/app/comp/Matchlist'
+import Matchlist from '../../comp/Matchlist'
 import React from 'react'
 
 function page() {
