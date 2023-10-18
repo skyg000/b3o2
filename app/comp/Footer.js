@@ -6,8 +6,8 @@ function Footer() {
     const nav = useRouter();
     const logout = (e) => {
         e.preventDefault();
-        sessionStorage.removeItem('id')
-        sessionStorage.removeItem('gender')
+        window.sessionStorage.removeItem('id')
+        window.sessionStorage.removeItem('gender')
         nav.push("../../pages/login");
     }
     const fnav = useRouter();

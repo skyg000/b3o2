@@ -35,8 +35,8 @@ function Matchlist() {
 		getFData();
 	}, [])
 
-	const currentUserID = sessionStorage.getItem('id');
-	const currentUserGender = sessionStorage.getItem('gender');
+	const currentUserID = window.sessionStorage.getItem('id');
+	const currentUserGender = window.sessionStorage.getItem('gender');
 	const filteredMdata = Mdata.filter((mobj) => mobj.id !== currentUserID);
 
 
