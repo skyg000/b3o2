@@ -1,7 +1,6 @@
 "use client"
 import React, { useEffect, useState } from 'react'
 import PicklistStyle from '../pages/picklist/picklist.module.scss'
-import { Link } from 'react-router-dom';
 import PickOne from './PickOne'
 import Contact from './Contact'
 import axios from "axios";
