@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState } from 'react';
-import bord from '../style/bord.module.scss';
+import bord from '../pages/bord/bord.module.scss';
 import axios from 'axios';
 
 function Bord() {

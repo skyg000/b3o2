@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 
 import axios from "axios";
-import styles from "../style/checkfortune.module.scss";
+import styles from "../pages/checkfortune/checkfortune.module.scss";
 import { useRouter } from "next/navigation";
 
 function Checkfortune() {
@@ -20,8 +20,10 @@ function Checkfortune() {
       setMemberData(res.data);
     });
   }, []);
-
-  const sessionId = window.sessionStorage.getItem("id");
+  if (typeof window !== 'undefined') {
+    const sessionId = window.sessionStorage.getItem("id");
+    // 나머지 코드
+  }
 
   const loginUser = memberData.find((member) => member.id === sessionId);
 

@@ -1,7 +1,7 @@
 "use client"
 import React, { useEffect, useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
-import match from '../style/matchlisr.module.scss'
+import match from '../pages/matchlist/matchlisr.module.scss'
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';

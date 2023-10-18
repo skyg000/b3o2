@@ -1,5 +1,5 @@
 "use client"
-import pickone from '../style/pickone.module.scss'
+import pickone from '../pages/pickone/pickone.module.scss'
 import React, { useEffect, useState } from 'react'
 import axios from "axios";
 

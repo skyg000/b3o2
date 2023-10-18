@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import loginSt from "../style/login.module.scss";
+import loginSt from "../pages/login/login.module.scss";
 import axios from "axios";
 function Login() {
   const router = useRouter();

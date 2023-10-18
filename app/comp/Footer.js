@@ -6,9 +6,12 @@ function Footer() {
     const nav = useRouter();
     const logout = (e) => {
         e.preventDefault();
-        window.sessionStorage.removeItem('id')
-        window.sessionStorage.removeItem('gender')
-        nav.push("../../pages/login");
+        if (typeof window !== 'undefined') {
+            window.sessionStorage.removeItem('id')
+            window.sessionStorage.removeItem('gender')
+            nav.push("../../pages/login");
+          }
+        
     }
     const fnav = useRouter();
 

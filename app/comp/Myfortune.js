@@ -2,7 +2,7 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { ChatGPTAPI } from "chatgpt";
-import styles from "../style/myfortune.module.scss";
+import styles from "../pages/myfortune/myfortune.module.scss";
 
 const Myfortune = function () {
   const [userId, setUserId] = useState([]);

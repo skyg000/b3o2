@@ -1,7 +1,7 @@
 "use client";
 import React, { useRef, useState } from "react";
 import axios from "axios";
-import joinSt from "../style/join.module.scss";
+import joinSt from "../pages/join/join.module.scss";
 import { useRouter } from "next/navigation";
 
 function Join() {
