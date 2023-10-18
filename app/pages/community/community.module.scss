@@ -1,0 +1,116 @@
+.select {
+    margin-top: 20px;
+    width: 100%;
+
+    >ul {
+        margin: 0 auto;
+        width: 85%;
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
+
+        li {
+            >button {
+                cursor: pointer;
+                border-radius: 20px;
+                padding: 10px 15px;
+                border: 0;
+                color: #656565;
+                background-color: #FFCBAF;
+            }
+
+            .select_item.active {
+                color: white;
+                background-color: #F45852;
+            }
+        }
+    }
+}
+
+
+.community {
+    margin-top: 30px;
+
+    .ul2 {
+        width: 85%;
+        margin: 0 auto;
+
+        li {
+            width: 90%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            border-bottom: 1px solid #656565;
+
+            .p_flex {
+                margin: 5px 0;
+                display: flex;
+                align-items: center;
+
+                >span {
+                    margin-right: 15px;
+                }
+            }
+
+            p:nth-of-type(2) {
+                span {
+                    float: right;
+                    position: relative;
+
+                    &::before {
+                        top: 3px;
+                        right: 30px;
+                        position: absolute;
+                        content: '';
+                        display: inline-block;
+                        width: 20px;
+                        height: 20px;
+                        background: url('../../../public/imges/icon_heart.png') no-repeat;
+                    }
+                }
+            }
+
+            .div_flex {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                
+                p {}
+
+                span {
+                    button {
+                        border: 0;
+                        background: none;
+
+                        .displaynone {
+                            display: none;
+                        }
+                    }
+
+                    button.active {
+                        .displayyes {
+                            display: none;
+                        }
+
+                        .displaynone {
+                            display: block;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+    .pagination {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    button{
+        background-color: #FFDF8C;
+        color: #656565;
+        border: 1px solid #F45852;
+        border-radius: 20px;
+    }
+    }
+}

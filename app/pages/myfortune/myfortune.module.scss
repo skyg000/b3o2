@@ -1,0 +1,37 @@
+.myfortuneWrap {
+  div {
+    margin: 0 auto;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 90%;
+    background-color: white;
+  }
+  div:not(:last-child) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  span {
+    color: #ff9359;
+  }
+  span,
+  p {
+    width: 50%;
+    text-align: left;
+    background-color: white; // 이 부분을 추가
+  }
+  div:last-child {
+    text-align: left;
+    p,
+    span {
+      width: 100%;
+    }
+  }
+  .BODType {
+    background-color: #ffcbaf;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 35%;
+  }
+}

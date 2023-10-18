@@ -10,11 +10,19 @@
   },
   "dependencies": {
     "axios": "^1.5.1",
+    "chatgpt": "^5.2.5",
+    "debug": "^4.3.4",
     "googlebard-js": "^1.1.5",
+    "mysql": "^2.18.1",
     "next": "13.5.4",
     "react": "^18",
     "react-dom": "^18",
-    "sass": "^1.69.1",
-    "scss": "^0.2.4"
+    "scss": "^0.2.4",
+    "swiper": "^10.3.1"
+  },
+  "devDependencies": {
+    "sass": "^1.69.3",
+    "sass-loader": "^13.3.2",
+    "webpack": "^5.89.0"
   }
 }

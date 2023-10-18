@@ -4,17 +4,52 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'NPSfontBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/NPSfontBold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'LotteMartDream';
+    font-style: normal;
+    font-weight: 700;
+    src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamBold.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamBold.woff') format('woff');
+  }
+  @font-face {
+    font-family: 'TAEBAEKmilkyway';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/TAEBAEKmilkyway.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+*{
+    /* font-family: 'Cafe24Ssurround'; */
+    /* font-family: 'NPSfontBold'; */
+    /* font-family: 'LotteMartDream'; */
+    font-family: 'TAEBAEKmilkyway';
+    font-weight: 700;
+    
+}
 html{
-    font-family: 'Cafe24Ssurround';
     max-width: 480px;
     margin: 0 auto;
-    font-weight: normal;
 }
 body{
+    max-width: 480px;
     position: relative;
+    margin: 0 auto;
+    cursor: pointer;
+}
+main{
+    height: 100vh;
+    background:#FFDF8C;
+}
+h1,h2,h3{
     margin: 0;
 }
-a{
+a,ul,li,p{
+    padding: 0;
+    margin: 0 ;
     text-decoration:none ;
     list-style: none;
 }

@@ -1,8 +1,5 @@
 
 .home{
-    max-width: 480px;
-    background-color: #FFDF8C;
-    height: 100vh;
     p{
         display: flex;
         color:#F45852;
@@ -15,8 +12,7 @@
             color:#F45852
         }
     }
-    .m-log{
-        background-color: #FFDF8C;
+    .m_img{
         position: relative;
         margin: 50px 120px 0px;
     }
@@ -24,7 +20,7 @@
         padding: 20px;
         form{
             p{
-                margin: 50px 10px;
+                margin: 20px 10px;
                 input{
                     width: 400px;
                     padding: 20px;
@@ -37,24 +33,27 @@
                     border: none;
                 }
             }
-            button{
-                margin: 0px 10px;
-                width: 402px;
-                padding: 20px;
-                background-color: #F45852;
-                border: none;
-                font-family: 'Cafe24Ssurround';
-                font-weight: normal;
-            }
+            
         }
     }
-    .footer{
-        position: absolute;
-        bottom: 50px;
-        margin: 0 15px;
-        a{
-            color: #F45852;
-            margin: 0 20px;
-        }
+    .submit{
+        margin-bottom: 100px;
+    }
+    .aa{    
+        color: black;
+        margin: 50px 10px;
+        padding:20px 179px;
+        background-color:#F45852
     }
 }
+.head{
+    padding: 15px 50px;
+}
+
+    .foot{
+        padding: 37px 53px 0;
+    }
+    .hidden{
+        display: none;
+    }
+
