@@ -1,4 +1,4 @@
-import { queryExecute} from "../DB"
+import { queryExecute} from "../Db"
 
 export async function DELETE(req, {params}){
     console.log(params);
