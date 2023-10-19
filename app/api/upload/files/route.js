@@ -1,4 +1,4 @@
-import { queryExecute } from "../../DB"
+import { queryExecute } from "../../Db"
 
 export async function GET(){
     const q = 'select * from files'
