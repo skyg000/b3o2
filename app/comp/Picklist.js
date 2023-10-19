@@ -1,14 +1,13 @@
 "use client"
 import React, { useEffect, useState } from 'react'
 import PicklistStyle from '../pages/picklist/picklist.module.scss'
-import PickOne from './PickOne'
-import Contact from './Contact'
+import Link from 'next/link';
 import axios from "axios";
 
 function Picklist() {
     const [pickList, setPickList] = useState([]);
     useEffect(() => {
-        const id = typeof window !== 'undefined' ? window.sessionStorage.getItem("id") :null
+        const id = sessionStorage.getItem("id")
         // myPick이 true : 내가 찜한 애
         // myPick이 false : 나를 찜한 애
         axios.get(`/api/matchlist?myPick=false&id=${id}`)
@@ -26,13 +25,11 @@ function Picklist() {
                 <div className={PicklistStyle.cardtitle}>김예솔 공주님을 기다리는 사람들입니다. </div>
                 <div className={PicklistStyle.cardalign}>
                     {pickList.map((pick, idx) => (
-                        // <Link to="/picklist">
-                            <div className={PicklistStyle.card}>
+                        <Link href={`/pages/picklist/${pick.id}`} className={PicklistStyle.card}>
                                 <img src="../imges/main.png" />
                                 <div>{pick.id}</div>
-                                <div>{pick.date}</div>
-                            </div>
-                        // </Link>
+                                <div>{pick.job}</div>
+                        </Link>
                     ))}
                     
                 </div>
@@ -40,8 +37,6 @@ function Picklist() {
                     <img src='../imges/loading.gif'/>
                 </div>
             </div>
-            <PickOne/>
-            <Contact/>
         </>
     )
 }

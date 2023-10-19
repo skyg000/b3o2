@@ -1,4 +1,4 @@
-import PickOne from '../../comp/PickOne'
+import PickOne from '@/app/comp/PickOne'
 import React from 'react'
 
 function page() {

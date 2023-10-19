@@ -1,31 +1,36 @@
-.head{
-    padding: 0 50px;
-    .h_line{
-        width: 100%;
-        margin-top: 15px;
-    }
+.head {
+  padding: 0 50px;
+  .h_line {
+    width: 100%;
+    margin-top: 15px;
+  }
 }
 
-
-
-.foot{
-    position: fixed;
-    bottom: 0px;
-    padding: 0 0 0px 50px;
-    .f_line{
-        width: 100%;
-        margin-bottom: 35px;
+.foot {
+  position: fixed;
+  bottom: 0px;
+  padding: 0 50px;
+  .f_line {
+    width: 100%;
+    margin-bottom: 35px;
+  }
+  div {
+    .f_line2 {
+      width: 100%;
+      margin-bottom: 120px;
     }
-}
-.f_link{
-    position: absolute;
-    bottom: 1px;
-    padding: 18px 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    background-color: #f8eed4;
-    .f_a{
+    .f_link {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      padding: 18px 3px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      background-color: #f8eed4;
+      .f_a {
         text-align: start;
         border: none;
         /* padding: 10px; */
@@ -34,46 +39,55 @@
         /* margin-right: 10px; */
         margin-top: 15px;
         text-align: center;
-    }
-    &.active{
-        color: #F45852;
-    }
-   
-    .out{
+      }
+      &.active {
+        color: #f45852;
+      }
+
+      .out {
         border: none;
         background: none;
         margin-top: 15px;
-    }
-    
-    .column{
+      }
+
+      .column {
+        display: flex;
+        flex-direction: column;
+        width: 70px;
+        text-align: center;
+        margin-right: 15px;
+        align-items: center;
+      }
+
+      .column_matchlist,
+      .column_myfortune,
+      .column_picklist,
+      .column_community {
         display: flex;
         flex-direction: column;
         width: 70px;
         text-align: center;
         margin-right: 20px;
         align-items: center;
-        .img{
-            color: #F45852;
+        button {
+          color: #f45852;
         }
-        &.active{
-            stroke: #F45852;
+        .f_svg1 {
+          path {
+            stroke: #f45852;
+          }
         }
+        .f_svg2 {
+          path {
+            fill: #f45852;
+          }
+        }
+      }
+      .column_myfortune {
+        path:nth-child(2) {
+          fill: #f45852;
+        }
+      }
     }
-
-    &.active{
-        fill: #F45852;
-    }
+  }
 }
-.f_svg.active{
-    
-        stroke: #f45852;
-    
-}
-
-.path.active{
-    path{
-        stroke: #f45852;
-    }
-    color: #F45852;
-}
-

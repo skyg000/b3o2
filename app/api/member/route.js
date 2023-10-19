@@ -18,7 +18,7 @@ export async function GET(req) {
   const type = req.nextUrl.searchParams.get('type');
   let data=[];
   if(type == 'login'){
-    data = await queryExecute("SELECT * from member where id=? && password=?",[id,pw]);
+    data = await queryExecute("SELECT * from member where id=? AND password=?",[id,pw]);
     console.log(data ,'------------')
   }else{
     data = await queryExecute("SELECT * from member");

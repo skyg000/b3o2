@@ -13,7 +13,7 @@ function PickOne() {
     const onMatchButtonClick = () => {
         axios.put('/api/matchlist', {
             id: id,
-            opntid: typeof window !== 'undefined' ? sessionStorage.getItem('id') : null,
+            opntid: sessionStorage.getItem('id'),
             y_status: 'yes'
         })
         .then(() => router.push(`/pages/contact/${id}`));
