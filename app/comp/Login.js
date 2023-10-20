@@ -8,6 +8,7 @@ import { MyContext } from "../Context";
 function Login() {
   const { setSessionId } = useContext(MyContext);
   const router = useRouter();
+  const nav = useRouter();
   const [inputId, setInputId] = useState("");
   const [inputPw, setInputPw] = useState("");
   const [logMsg, setlogMsg] = useState(null);
@@ -19,7 +20,10 @@ function Login() {
   const handleInputPw = (e) => {
     setInputPw(e.target.value);
   };
-
+  const onClickJoin = (e)=>{
+    e.preventDefault();
+    nav.push("../../pages/join")
+  }
   const onClickLogin = (e, k) => {
     e.preventDefault();
     axios
@@ -75,9 +79,9 @@ function Login() {
             </p>
             {/* <button onClick={nav}> 회 원 가 입</button> */}
           </form>
-          <Link href="../../pages/join" className={loginSt.aa}>
+          <button onClick={onClickJoin} className={loginSt.aa}>
             회원가입{" "}
-          </Link>
+          </button>
         </div>
       </div>
     </>
