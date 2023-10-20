@@ -4,8 +4,8 @@ import "./globals.css";
 import Context from "./Context";
 
 export const metadata = {
-  title: "별별 연인",
-  description: "사주를 통한 나의 짝 찾기",
+  title: "사주를 통한 나의 짝 찾기",
+  description: "별별 연인",
 };
 
 export default function RootLayout({ children }) {
