@@ -15,7 +15,7 @@
 	}
 	>h2 {
 		margin: 0;
-		padding: 80px 0;
+		padding: 40px 0;
 		font-size: 20px;
 		text-align: center;
 	}
@@ -29,7 +29,7 @@
 			width: 320px;
 			height: 450px;
 			border-radius: 10px;
-			padding: 30px;
+			padding: 0 25px 0;
 			.slide_content {
 				>figure {
 					width: 30%;
@@ -40,11 +40,11 @@
 				}
 				>h2 {
 					// text-align: center;
-					margin: 10px auto 20px;
+					margin: 10px auto 10px;
 				}
 				>p {
 					width: 90%;
-					margin: 10px 0;
+					margin: 5px 0;
 					>span{
 						margin-left: 20px;
 					}

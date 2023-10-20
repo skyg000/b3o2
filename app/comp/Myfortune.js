@@ -77,7 +77,12 @@ const Myfortune = function () {
         <div style={{ whiteSpace: "pre-line" }}>
           <p className={styles.fortune}> 
             <div className={styles.pre1}>▶</div>
-            <div>{fortuneData?.fortune}</div>
+              <div
+              dangerouslySetInnerHTML={{
+                __html: fortuneData && fortuneData.fortune ? fortuneData.fortune.replaceAll(".", ".<br>") : "",
+              }}
+              >
+          </div>
             <div className={styles.pre}>◀</div>
 
           </p>
