@@ -70,13 +70,27 @@ const Myfortune = function () {
 
   console.log(fortuneData?.fortune);
   return (
-    <>
+    <div className={styles.myfortuneWrap}>
+      <img src='../../imges/main_angel_cut.png' />
+      <div className={styles.title} >당신의 운세</div>
       {fortuneData && fortuneData?.fortune !== null ? (
         <div style={{ whiteSpace: "pre-line" }}>
-          <p>{fortuneData?.fortune}</p>
-          <p>{fortuneData?.myelement}</p>
-          <p>{fortuneData?.yourelement}</p>
-          <p>데이터가 있당게요</p>
+          <p className={styles.fortune}> 
+            <div>▶</div>
+            <div>{fortuneData?.fortune}</div>
+            <div>◀</div>
+
+          </p>
+          <div className={styles.row}>
+            <p>
+              <p className={styles.eleTitle}>&lt; 나의 5행 &gt;</p>
+              <p className={styles.ele}>{fortuneData?.myelement}</p>
+            </p>
+            <p>
+              <p className={styles.eleTitle}>&lt; 상대의 5행 &gt;</p>
+              <p className={styles.ele}>{fortuneData?.yourelement}</p>
+            </p>
+          </div>
         </div>
       ) : (
         answer && (
@@ -84,11 +98,11 @@ const Myfortune = function () {
             <p>{answer.response1}</p>
             <p>{answer.response2}</p>
             <p>{answer.response3}</p>
-            <p>데이터가 없었당게요</p>
+           
           </div>
         )
       )}
-    </>
+    </div>
   );
 };
 

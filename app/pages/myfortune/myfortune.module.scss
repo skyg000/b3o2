@@ -1,37 +1,41 @@
 .myfortuneWrap {
-  div {
-    margin: 0 auto;
-    margin-bottom: 10px;
-    padding: 10px;
-    width: 90%;
-    background-color: white;
+  line-height:2;
+  padding: 30px 50px ;
+  >img{
+    margin-left: 100px;
   }
-  div:not(:last-child) {
+  .title{
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    background-color: #FF9359;
+    color: white;
+    padding: 10px 0;
+  }
+  .fortune{
+    font-size: 1.1rem ;
+    margin-bottom: 30px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  span {
-    color: #ff9359;
-  }
-  span,
-  p {
-    width: 50%;
-    text-align: left;
-    background-color: white; // 이 부분을 추가
-  }
-  div:last-child {
-    text-align: left;
-    p,
-    span {
-      width: 100%;
+    >div:nth-of-type(2){
+      margin: 0 30px;
     }
   }
-  .BODType {
-    background-color: #ffcbaf;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 35%;
+  .row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    line-height: 2;
+    .eleTitle{
+      text-align: center;
+      margin-bottom: 10px;
+      
+    }
+    .ele{
+      width: 80px;
+      box-shadow: 0 0 10px #FF9359;
+      background-color: white;
+      padding: 20px 40px;
+      border-radius: 3px;
+    }
   }
 }

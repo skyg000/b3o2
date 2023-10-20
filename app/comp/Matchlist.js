@@ -209,7 +209,7 @@ function Matchlist() {
 	useEffect(()=>{
 		setActItem()
 	},[classAct])
-	if (!matching.length) return <>loading.....</>;
+	if (!matching.length) return <div className={matchlist.loading}><img src='../imges/loading.gif' /></div>;
 
 	const matchedMembers = getMatchingMembers();
 

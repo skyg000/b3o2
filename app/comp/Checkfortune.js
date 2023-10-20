@@ -48,7 +48,7 @@ function Checkfortune() {
           </div>
 
           <div className={styles.row}>
-            {loginUser.time !== "모름" ? (
+            {loginUser.time !== "태어난 시 모름" ? (
               <>
                 <p className={styles.timeInput}>{loginUser.time}</p>
                 <p className={styles.inactive}>모름</p>

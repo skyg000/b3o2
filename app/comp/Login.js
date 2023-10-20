@@ -10,6 +10,7 @@ function Login() {
   const router = useRouter();
   const [inputId, setInputId] = useState("");
   const [inputPw, setInputPw] = useState("");
+  const [logMsg, setlogMsg] = useState(null);
   const [user, setUser] = useState();
   const handleInputId = (e) => {
     setInputId(e.target.value);
@@ -27,11 +28,8 @@ function Login() {
         setUser(res.data);
         if (res.data[0].id !== inputId && res.data[0].password !== inputPw) {
           // id 일치하지 않는 경우 userId = undefined, msg = '입력하신 id 가 일치하지 않습니다.'
-          console.log("======================", "실패");
-          alert("입력하신 id 가 일치하지 않습니다.");
         } else if (res.data[0].id === inputId) {
           // id, pw 모두 일치 userId = userId1, msg = undefined
-          console.log("======================", "로그인 성공");
           sessionStorage.setItem("id", inputId);
           sessionStorage.setItem("gender", res.data[0].gender);
           setSessionId(inputId);
@@ -41,7 +39,7 @@ function Login() {
       })
       .catch((error) => {
         // 오류 처리
-        alert("입력하신 id 와 비밀번호를 확인해주세요.");
+        setlogMsg("입력하신 id 와 비밀번호를 확인해주세요.");
       });
   };
   return (
@@ -69,6 +67,7 @@ function Login() {
                 onChange={handleInputPw}
               />
             </p>
+            <p>{logMsg}</p>
             <p>
               <button onClick={onClickLogin} className={loginSt.submit}>
                 로그인

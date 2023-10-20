@@ -6,26 +6,40 @@ import axios from "axios";
 
 function Picklist() {
     const [pickList, setPickList] = useState([]);
+    const [pickMsg, setPickMsg] = useState([]);
+    const id = sessionStorage.getItem("id")
+    
     useEffect(() => {
-        const id = sessionStorage.getItem("id")
         // myPick이 true : 내가 찜한 애
         // myPick이 false : 나를 찜한 애
         axios.get(`/api/matchlist?myPick=false&id=${id}`)
             .then((res) => {
                 setPickList(res.data);
             });
+        axios.get(`/api/member?id=${id}`)
+            .then((res) => {
+                setPickMsg(res.data);
+                
+            });
     }, []);
-
-  
+    const pickId = pickMsg.filter((member)=>member.id === id)
     
+let nameFromPickId = ''; // 초기화
+
+if (pickId.length > 0) {
+    nameFromPickId = pickId[0].name;
+}
+
+console.log(nameFromPickId);
+
     return (
         <>
             <div className={PicklistStyle.home}>
 
-                <div className={PicklistStyle.cardtitle}>김예솔 공주님을 기다리는 사람들입니다. </div>
+                <div className={PicklistStyle.cardtitle}>{nameFromPickId}님을 기다리는 사람들입니다. </div>
                 <div className={PicklistStyle.cardalign}>
                     {pickList.map((pick, idx) => (
-                        <Link href={`/pages/picklist/${pick.id}`} className={PicklistStyle.card}>
+                        <Link href={`/pages/picklist/${pick.id}`} className={PicklistStyle.card} >
                                 <img src="../imges/main.png" />
                                 <div>{pick.id}</div>
                                 <div>{pick.job}</div>
