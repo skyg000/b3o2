@@ -7,7 +7,7 @@ import axios from "axios";
 function Picklist() {
     const [pickList, setPickList] = useState([]);
     const [pickMsg, setPickMsg] = useState([]);
-    const id = sessionStorage.getItem("id")
+    const id = typeof window !== 'undefined' ? window.sessionStorage.getItem("id"):null 
     
     useEffect(() => {
         // myPick이 true : 내가 찜한 애
