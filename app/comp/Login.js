@@ -72,16 +72,16 @@ function Login() {
               />
             </p>
             <p>{logMsg}</p>
-            <p>
+            <p className={loginSt.btn}>
               <button onClick={onClickLogin} className={loginSt.submit}>
                 로그인
+              </button>
+              <button onClick={onClickJoin} className={loginSt.aa}>
+                회원가입{" "}
               </button>
             </p>
             {/* <button onClick={nav}> 회 원 가 입</button> */}
           </form>
-          <button onClick={onClickJoin} className={loginSt.aa}>
-            회원가입{" "}
-          </button>
         </div>
       </div>
     </>

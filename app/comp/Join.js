@@ -68,11 +68,11 @@ function Join() {
   };
   return (
     <div className={joinSt.j_home}>
-      <h2>
+      <h3>
         별별연인에 오신 것을 환영 합니다!
         <br />
         아래에 프로필을 작성해 주세요.
-      </h2>
+      </h3>
       <div className={joinSt.idcheck}>
         <p>{msg}</p>
         <button className={joinSt.check} onClick={idCheck}>

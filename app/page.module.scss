@@ -9,7 +9,7 @@
 .foot {
   position: fixed;
   bottom: 0px;
-  padding: 0 50px;
+  padding: 0 53px;
   .f_line {
     width: 100%;
     margin-bottom: 35px;
@@ -25,9 +25,9 @@
       left: 0;
       right: 0;
       width: 100%;
-      padding: 18px 3px;
+      padding: 18px 0px;
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: flex-end;
       background-color: #f8eed4;
       .f_a {
@@ -55,7 +55,7 @@
         flex-direction: column;
         width: 70px;
         text-align: center;
-        margin-right: 15px;
+        margin:0 7px;
         align-items: center;
       }
 
@@ -66,8 +66,8 @@
         display: flex;
         flex-direction: column;
         width: 70px;
+        margin:0 7px;
         text-align: center;
-        margin-right: 20px;
         align-items: center;
         button {
           color: #f45852;

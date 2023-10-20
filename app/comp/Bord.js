@@ -23,7 +23,7 @@ console.log(data);
                 <ul className={bord.ul1}>
                     {data.map(obj => (
                         <li key={obj.num} className={bord.board_li}>
-                            <p><span>{obj.type}</span> {obj.title}</p>
+                            <p className={bord.title}><span>{obj.type}</span> {obj.title}</p>
                             <div className= {bord.board_li_div}>
                                 <p>{obj.text}</p>
                                 <p>{obj.date}</p>
