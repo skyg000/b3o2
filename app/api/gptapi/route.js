@@ -7,7 +7,7 @@ export async function GET(req) {
   const api = new ChatGPTAPI({
     apiKey: process.env.NEXT_PUBLIC_OPENAI_API_KEY,
     completionParams: {
-      model: "gpt-3.5-turbo-16k",
+      model: "gpt-4-0613",
       temperature: 0.5,
       top_p: 0.8,
     },

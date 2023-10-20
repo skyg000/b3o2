@@ -53,8 +53,8 @@ function Reply({ commentNum, selectedNum }) {
               index // index를 두 번째 인자로 받아야 합니다.
             ) => (
               <li key={index}>
-                <p>{comment.user_id}</p>
-                <p>{comment.contents}</p>
+                <p><span className={community.reply_user_id} >{comment.user_id}</span></p>
+                <p className={community.reply_contents} >{comment.contents}</p>
               </li>
             )
           )}

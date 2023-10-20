@@ -223,7 +223,7 @@ function Matchlist() {
 		<>
 			<div className={matchlist.matchlist}>
 				<h2>
-					이용자 님과 잘 맞는 회원님을 추천할게요!
+					회원님과 잘 맞는 상대를 추천할게요!
 				</h2>
 				<Swiper
 					effect={'coverflow'}
