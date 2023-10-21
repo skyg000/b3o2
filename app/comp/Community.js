@@ -33,7 +33,7 @@ function Community() {
       const pageOffset = (currentPage - 1) * pageSize;
       const updatedReplies = [...openReplies];
       const adjustedIndex = postIndex - pageOffset;
-      updatedReplies[adjustedIndex] = !updatedReplies[adjustedIndex]
+      updatedReplies[adjustedIndex] = !updatedReplies[adjustedIndex]/* 댓글 이슈 해결  */
       setOpenReplies(updatedReplies);
     }
   };
