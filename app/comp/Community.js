@@ -25,13 +25,15 @@ function Community() {
 
   useEffect(() => {
     setOpenReplies(initialReplyState);
-  }, [data]);
+  }, [data,currentPage]);
   const toggleReply = (num) => {
     // 특정 num의 댓글 상태를 토글
     const postIndex = data.findIndex((post) => post.num === num);
     if (postIndex !== -1) {
+      const pageOffset = (currentPage - 1) * pageSize;
       const updatedReplies = [...openReplies];
-      updatedReplies[postIndex] = !updatedReplies[postIndex];
+      const adjustedIndex = postIndex - pageOffset;
+      updatedReplies[adjustedIndex] = !updatedReplies[adjustedIndex]
       setOpenReplies(updatedReplies);
     }
   };
