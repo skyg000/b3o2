@@ -13,13 +13,31 @@ export async function POST(req) {
 
 export async function PUT(req) {
   const { id, fortune, myelement, yourelement } = await req.json();
-  const data = await queryExecute(
-    `UPDATE fortune 
-         SET fortune = ?, myelement = ?, yourelement = ? 
-         WHERE id = ?`,
-    [fortune, myelement, yourelement, id]
-  );
-  return Response.json(data);
+
+  try {
+    const data = await queryExecute(
+      `UPDATE fortune 
+           SET fortune = ?, myelement = ?, yourelement = ? 
+           WHERE id = ?`,
+      [fortune, myelement, yourelement, id]
+    );
+
+    console.log(data);
+    return new Response(JSON.stringify(data), {
+      status: 200,
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+  } catch (error) {
+    console.error("Error updating fortune:", error);
+    return new Response(JSON.stringify({ error: "Error updating fortune" }), {
+      status: 500,
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+  }
 }
 
 export async function GET(req) {

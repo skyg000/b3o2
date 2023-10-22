@@ -25,7 +25,7 @@ function Community() {
 
   useEffect(() => {
     setOpenReplies(initialReplyState);
-  }, [data,currentPage]);
+  }, [data, currentPage]);
   const toggleReply = (num) => {
     // 특정 num의 댓글 상태를 토글
     const postIndex = data.findIndex((post) => post.num === num);
@@ -33,7 +33,8 @@ function Community() {
       const pageOffset = (currentPage - 1) * pageSize;
       const updatedReplies = [...openReplies];
       const adjustedIndex = postIndex - pageOffset;
-      updatedReplies[adjustedIndex] = !updatedReplies[adjustedIndex]/* 댓글 이슈 해결  */
+      updatedReplies[adjustedIndex] =
+        !updatedReplies[adjustedIndex]; /* 댓글 이슈 해결  */
       setOpenReplies(updatedReplies);
     }
   };
@@ -125,7 +126,7 @@ function Community() {
                     <p>{obj.title}</p>
                   </div>
                   <p>{obj.contents}</p>
-                  <img src={obj.img} className={community.boardImg}/>
+                  <img src={obj.img} className={community.boardImg} />
                   <div className={community.div_flex}>
                     <p>{obj.date}</p>
                     <button

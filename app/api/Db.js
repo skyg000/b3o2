@@ -1,5 +1,5 @@
 var mysql = require("mysql");
-console.log('process.env.NEXT_PUBLIC_HOST : ', process.env.NEXT_PUBLIC_HOST);
+console.log("process.env.NEXT_PUBLIC_HOST : ", process.env.NEXT_PUBLIC_HOST);
 
 var connection = mysql.createConnection({
   host: process.env.NEXT_PUBLIC_HOST,
@@ -13,8 +13,12 @@ connection.connect();
 export async function queryExecute(str, value) {
   let data = await new Promise((resolve, reject) => {
     connection.query(str, value, function (error, results) {
-      resolve(results);
+      if (error) {
+        reject(error);
+      } else {
+        resolve(results);
+      }
     });
-  });
+  }).catch((err) => console.error(err));
   return data;
 }
