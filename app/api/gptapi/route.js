@@ -7,7 +7,7 @@ export async function GET(req) {
   const api = new ChatGPTAPI({
     apiKey: process.env.NEXT_PUBLIC_OPENAI_API_KEY,
     completionParams: {
-      model: "gpt-4-0613",
+      model: "gpt-3.5-turbo",
       temperature: 0.5,
       top_p: 0.8,
     },
@@ -19,13 +19,13 @@ export async function GET(req) {
 
   // 첫 번째 응답을 기반으로 두 번째 질문을 합니다.
   let response2 = await api.sendMessage(
-    "저 사주를 바탕으로 나의 오행 갯수를 화(火): 0개 수(水): 0개 목(木): 0개  금(金): 0개 토(土): 0개 이런식으로 띄어쓰기와 설명없이 그냥 갯수를 말해줘.",
+    "저 사주를 바탕으로 나의 오행 갯수를 화(火): 0개 수(水): 0개 목(木): 0개  금(金): 0개 토(土): 0개 이런식으로 띄어쓰기와 설명없이 그냥 갯수만 말해줘.",
     {
       parentMessageId: response1.id,
     }
   );
   let response3 = await api.sendMessage(
-    "저 사주를 바탕으로 나와 어울리는 상대의 오행 갯수를 화(火): 0개 수(水): 0개 목(木): 0개  금(金): 0개 토(土): 0개 이런식으로 띄어쓰기와 설명없이 그냥 갯수를 말해줘.",
+    "저 사주를 바탕으로 나와 어울리는 상대의 오행 갯수를 화(火): 0개 수(水): 0개 목(木): 0개  금(金): 0개 토(土): 0개 이런식으로 띄어쓰기와 설명없이 그냥 갯수만 말해줘.",
     {
       parentMessageId: response1.id,
     }

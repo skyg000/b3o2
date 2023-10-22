@@ -20,10 +20,11 @@ function Checkfortune() {
       setMemberData(res.data);
     });
   }, []);
-  
-  const sessionId = typeof window !== 'undefined' ?  window.sessionStorage.getItem("id") : null;
+
+  const sessionId =
+    typeof window !== "undefined" ? window.sessionStorage.getItem("id") : null;
   const loginUser = memberData.find((member) => member.id === sessionId);
-  
+
   return (
     <div className={styles.container}>
       {memberData.length > 0 && (
@@ -92,7 +93,7 @@ function Checkfortune() {
           </div>
 
           <div className={styles.row}>
-            <button /* onClick={sajuCheck} */ className={styles.submitButton}>
+            <button onClick={sajuCheck} className={styles.submitButton}>
               내 사주 확인하기
             </button>
           </div>

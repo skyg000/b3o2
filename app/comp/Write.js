@@ -5,7 +5,7 @@ import axios from 'axios';
 import { useRouter } from 'next/navigation';
 
 function Write() {
-  const [imgView, setImgView] = useState('');
+  const [imgView, setImgView] = useState();
   const [data, setData] = useState([]);
   const navigation = useRouter();
   const [activeIndex, setActiveIndex] = useState(null);
@@ -82,7 +82,7 @@ function Write() {
       const blob = new Blob([arraybuffer], { type: contentType });
       return URL.createObjectURL(blob);
     }else{
-      return ''; // 빈 값에 대한 처리 추가
+      return null; // 빈 값에 대한 처리 추가
     }
   }
 
