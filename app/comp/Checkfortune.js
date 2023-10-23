@@ -92,7 +92,7 @@ function Checkfortune() {
           </div>
 
           <div className={styles.row}>
-            <button /* onClick={sajuCheck} */ className={styles.submitButton}>
+            <button onClick={sajuCheck} className={styles.submitButton}>
               내 사주 확인하기
             </button>
           </div>
