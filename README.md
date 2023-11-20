@@ -1,5 +1,5 @@
 ## 별별연인(사주데이터를 통한 소개팅서비스) 
-### 제작 사이트 바로가기 => <a href="https://b3o2.vercel.app/"></a>
+### 제작 사이트 바로가기 => <a href="https://b3o2.vercel.app/"> https://b3o2.vercel.app/ </a>
 💛 별별연인 - B3O2
 Next.js를 이용한 사주기반 소개팅 어플
 
