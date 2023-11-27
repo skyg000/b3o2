@@ -65,7 +65,6 @@ const Myfortune = function () {
       updateFortune();
     }
   }, [answer]);
-  console.log(fortuneData?.fortune);
   return (
     <div className={styles.myfortuneWrap}>
       <img src="../../imges/main_angel_cut.png" />
