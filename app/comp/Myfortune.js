@@ -58,15 +58,15 @@ const Myfortune = function () {
             myelement: answer.response2,
             yourelement: answer.response3,
           });
-          console.log("Fortune updated:", response.data);
+         /*  console.log("Fortune updated:", response.data); */
         } catch (error) {
           console.error("Error updating fortune:", error);
         }
       }
       updateFortune();
     }
-  }, [answer]);
-  console.log(fortuneData?.fortune);
+  }, [answer]);/* 
+  console.log(fortuneData?.fortune); */
   return (
     <div className={styles.myfortuneWrap}>
       <img src="../../imges/main_angel_cut.png" />

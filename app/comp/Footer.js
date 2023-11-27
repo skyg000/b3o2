@@ -41,7 +41,7 @@ function Footer() {
     fnav.push("../../pages/login");
   };
 
-  console.log(sessionId);
+  /* console.log(sessionId); */
 
   return (
     <>
