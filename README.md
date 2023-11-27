@@ -19,9 +19,9 @@ Framework : Next.js<br>
 Database : MySQL
 
 🚨 트러블슈팅<br>
-[API요청]
-이슈 : Bard Api로 사주 정보 데이터를 불러왔으나 너무 많은 요청을 하는 경우,
-Bard측에서 Api요청을 막는 이슈 발생
+[API요청]<br>
+이슈 : Bard Api로 사주 정보 데이터를 불러왔으나 너무 많은 요청을 하는 경우,<br>
+Bard측에서 Api요청을 막는 이슈 발생<br>
 해결 : Chat Gpt Api로 대체
 
 [Server]
