@@ -21,7 +21,6 @@ const Myfortune = function () {
     typeof window !== "undefined" ? window.sessionStorage.getItem("id") : null;
 
   const loginUser = userId.find((member) => member.id === sessionId);
-  console.log(loginUser);
 
   useEffect(() => {
     if (!loginUser) return;

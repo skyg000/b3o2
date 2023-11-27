@@ -16,7 +16,6 @@ function Bord() {
     useEffect(()=>{
         getData();
     },[])
-console.log(data);
     return (
         <>
             <section className={bord.board}>
