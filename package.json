@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "axios": "^1.5.1",
+    "bardie": "^1.1.0",
     "chatgpt": "^5.2.5",
     "debug": "^4.3.4",
     "googlebard-js": "^1.1.5",
