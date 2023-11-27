@@ -1,4 +1,4 @@
-import { BardAI } from "bardie";
+import { BardAI } from "bard";
 
 export async function GET(req, res) {
   const bard = new BardAI();
