@@ -31,12 +31,12 @@ export async function GET(req, res) {
     let formattedResponse2 = formatFiveElements(cleanSecondResponse);
     let formattedResponse3 = formatFiveElements(cleanThirdResponse);
     console.log(cleanFirstResponse);
-    return res.json({
+    return Response.json({
       response1: cleanFirstResponse,
       response2: formattedResponse2,
       response3: formattedResponse3,
     });
   } catch (error) {
-    return res.json({ error: error.message });
+    return Response.json({ error: error.message });
   }
 }
