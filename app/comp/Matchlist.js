@@ -210,12 +210,6 @@ function Matchlist() {
 	if (!matching.length) return <div className={matchlist.loading}><img src='../imges/loading.gif' /></div>;
 
 	const matchedMembers = getMatchingMembers();
-
-
-
-	
-
-
 	return (
 		<>
 			<div className={matchlist.matchlist}>
