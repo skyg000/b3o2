@@ -30,7 +30,6 @@ if (pickId.length > 0) {
     nameFromPickId = pickId[0].name;
 }
 
-console.log(nameFromPickId);
 
     return (
         <>
